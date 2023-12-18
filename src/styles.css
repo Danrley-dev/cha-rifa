@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  font-family: roboto, Arial, Helvetica, sans-serif;
+  button{
+    background: none;
+    cursor: pointer;
+  }
+}
+
+:root {
+  --header1: #C8C4C8;
+  --header2: #FFCEFF;
+  --primary: #1976D2;
+  --body1: #FEE5FF;
+  --body2: #FFFFFF;
+  --text-menu: #FFFFFF;
+  --text-body: #000000;
+}
+
+:root .dark-theme {
+  --header1: #F299F3;
+  --header2: #DE6CE0;
+  --primary: pink;
+  --body1: #000000;
+  --body2: #F696F8;
+  --text-menu: #FFFFFF;
+  --text-body: #FFFFFF;
+}
+
+body {
+  background-image: linear-gradient(to top, var(--body1), var(--body2));
+  height: 100vh;
+}
+
+.container{
+  width: 510px;
+  margin: 0 auto;
+
+  h1{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 50px 0 10px;
+  }
+
+  p{
+    font-size: 12px;
+  }
+
+  h1,p{
+    color: var(--text-body);
+  }
+}
