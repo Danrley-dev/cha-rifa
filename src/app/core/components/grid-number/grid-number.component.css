@@ -1,0 +1,14 @@
+.grid-number {
+  border: 1px solid black;
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  box-shadow: none;
+}
+
+.number-tile {
+  border: 1px solid black;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0;
+}
