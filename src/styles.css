@@ -11,22 +11,19 @@
     background: none;
     cursor: pointer;
   }
-  overflow: hidden;
 }
 
 :root {
-  --header1: #C8C4C8;
-  --header2: #FFCEFF;
+  --header: white;
   --primary: #1976D2;
-  --body1: #FEE5FF;
+  --body1: #F4D8FE;
   --body2: #FFFFFF;
   --text-menu: #FFFFFF;
   --text-body: #000000;
 }
 
 :root .dark-theme {
-  --header1: #F299F3;
-  --header2: #DE6CE0;
+  --header: #EB8FED;
   --primary: pink;
   --body1: #000000;
   --body2: #F696F8;
@@ -59,3 +56,7 @@ body {
 }
 
 html, body { height: 100%; }
+
+@media (max-width: 600px) {
+  overflow: hidden;
+}

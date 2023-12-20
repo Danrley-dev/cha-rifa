@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "cha-rifa-heloisa",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

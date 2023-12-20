@@ -90,6 +90,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "cha-rifa-heloisa:build:production",
+              "serveTarget": "cha-rifa-heloisa:serve:production"
+            },
+            "development": {
+              "buildTarget": "cha-rifa-heloisa:build:development",
+              "serveTarget": "cha-rifa-heloisa:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

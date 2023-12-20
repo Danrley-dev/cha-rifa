@@ -1,5 +1,4 @@
-<div class="container">
-  <!-- app.component.html -->
+<div class="container" ><!--*ngIf="info$ | async as info; else loading"-->
 
   <div style="text-align:center" class="grid-number">
     <h1>Prêmio de R$ 200</h1>
@@ -8,7 +7,7 @@
   <app-grid-number></app-grid-number>
 
   <div class="button">
-    <button mat-raised-button color="blue">Escolher</button>
+    <button mat-raised-button color="primary" (click)="onClickAdd()">Escolher</button>
   </div>
 
   <div class="color-list">
@@ -17,3 +16,7 @@
     <div class="color-item" style="background-color: #0000ff;"></div>
   </div>
 </div>
+
+<!--<ng-template #loading>-->
+<!--  <app-loader label="Carregando..."></app-loader>-->
+<!--</ng-template>-->

@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {MatGridListModule} from "@angular/material/grid-list";
-import {NgForOf} from "@angular/common";
+import {AsyncPipe, NgClass, NgForOf, NgIf} from "@angular/common";
+import {MatButtonModule} from "@angular/material/button";
+import {LoaderComponent} from "../loader/loader.component";
 
 @Component({
   selector: 'app-grid-number',
@@ -8,20 +10,24 @@ import {NgForOf} from "@angular/common";
   standalone: true,
   imports: [
     MatGridListModule,
-    NgForOf
+    NgForOf,
+    NgClass,
+    MatButtonModule,
+    LoaderComponent,
+    AsyncPipe,
+    NgIf
   ],
   styleUrl: './grid-number.component.css'
 })
 export class GridNumberComponent implements OnInit {
-  numbers: number[] = [];
+  numbers: number[] = Array.from({length: 60}, (_, i) => i + 1);
+  selectedNumber: number | null = null;
+
+  selectNumber(number: number): void {
+    this.selectedNumber = number;
+  }
 
   ngOnInit(): void {
-    this.generateNumbers();
   }
 
-  private generateNumbers(): void {
-    for (let i = 1; i <= 60; i++) {
-      this.numbers.push(i);
-    }
-  }
 }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cha-rifa-605d4": {
+      "hosting": {
+        "cha-rifa-heloisa": [
+          "cha-rifa-605d4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cha-rifa-605d4"
+  }
+}
