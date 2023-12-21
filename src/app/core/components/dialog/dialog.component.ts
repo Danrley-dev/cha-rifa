@@ -3,9 +3,10 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatDialogContent, MatDialogRef, MatDialogTitle} from "@angular/material/dialog";
-import {FormControl, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {FormBuilder, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {Info} from "../../model/info";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-dialog',
@@ -18,7 +19,8 @@ import {Info} from "../../model/info";
     MatDialogTitle,
     FormsModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgIf
   ],
   templateUrl: './dialog.component.html',
   styleUrl: './dialog.component.css'
@@ -26,7 +28,7 @@ import {Info} from "../../model/info";
 export class DialogComponent implements OnInit {
   info: Info = {} as Info;
 
-  constructor(private ref: MatDialogRef<DialogComponent>) {
+  constructor(private fb: FormBuilder, private ref: MatDialogRef<DialogComponent>) {
   }
 
   onSubmit() {
@@ -36,6 +38,12 @@ export class DialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  formControl = this.fb.group(
+    {
+      nome: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      whatsapp: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(11)]]
+    }
+  );
 
 }

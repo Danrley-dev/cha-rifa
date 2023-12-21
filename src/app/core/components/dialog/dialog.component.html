@@ -1,42 +1,27 @@
-<form #form="ngForm" (ngSubmit)="onSubmit()" class="info-add">
-  <h2 mat-dialog-title>Confirmar informações</h2>
-  <div mat-dialog-content>
+<form [formGroup]="formControl" (ngSubmit)="onSubmit()">
+  <h2 mat-dialog-title class="h2">Número escolhido: {{info.numeroSelecionado}}</h2>
+  <div mat-dialog-content class="formContainer">
     <mat-form-field appearance="outline">
-      <mat-label>Número desejado</mat-label>
-      <input name="numero" matInput [(ngModel)]="info.numeroSelecionado" required/>
-      @if (emailFormControl.hasError('required')) {
-        <mat-error>Número é <strong>obrigatório</strong></mat-error>
-      }
-      <mat-icon matPrefix>mobile_friendly</mat-icon>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Nome</mat-label>
-      <input name="nome" matInput [(ngModel)]="info.nome" required/>
-      @if (emailFormControl.hasError('required')) {
-        <mat-error>Nome é <strong>obrigatório</strong></mat-error>
-      }
+      <mat-label class="label">Nome</mat-label>
+      <input class="input" matInput placeholder="Seu nome" formControlName="nome" required/>
+      <mat-error *ngIf="formControl.get('nome')?.errors?.['required']">Campo obrigatório</mat-error>
       <mat-icon matPrefix>person</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input name="email" type="email" matInput [formControl]="emailFormControl" required/>
-      @if (emailFormControl.hasError('email')) {
-        <mat-error>Email válido, por favor.</mat-error>
-      }
-      @if (emailFormControl.hasError('required')) {
-        <mat-error>Email é <strong>obrigatório</strong></mat-error>
-      }
+      <mat-label class="label">Email</mat-label>
+      <input class="input" matInput placeholder="Seu email" formControlName="email" required/>
+      <mat-error *ngIf="formControl.get('email')?.errors?.['required']">Campo obrigatório</mat-error>
+      <mat-error *ngIf="formControl.get('email')?.errors?.['email']">Email inválido</mat-error>
       <mat-icon matPrefix>email</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Whatsapp</mat-label>
-      <input name="celular" matInput [(ngModel)]="info.celular" required/>
-      @if (emailFormControl.hasError('required')) {
-        <mat-error>Número do whatsapp é <strong>obrigatório</strong></mat-error>
-      }
+      <mat-label class="label">Whatsapp</mat-label>
+      <input class="input" matInput placeholder="Seu whatsapp" formControlName="whatsapp" required/>
+      <mat-error *ngIf="formControl.get('whatsapp')?.errors?.['required']">Campo obrigatório</mat-error>
+      <mat-error *ngIf="formControl.get('whatsapp')?.errors?.['minlength']">DDD e número - 88952068372</mat-error>
       <mat-icon matPrefix>smartphone</mat-icon>
     </mat-form-field>
   </div>
   <br/>
-  <button mat-raised-button color="primary" [disabled]="form.invalid"> Salvar</button>
+  <button mat-raised-button color="primary" [disabled]="formControl.invalid"> Salvar </button>
 </form>

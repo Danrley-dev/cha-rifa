@@ -3,6 +3,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {AsyncPipe, NgClass, NgForOf, NgIf} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 import {LoaderComponent} from "../loader/loader.component";
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-grid-number',
@@ -15,7 +17,9 @@ import {LoaderComponent} from "../loader/loader.component";
     MatButtonModule,
     LoaderComponent,
     AsyncPipe,
-    NgIf
+    NgIf,
+    MatInputModule,
+    FormsModule
   ],
   styleUrl: './grid-number.component.css'
 })

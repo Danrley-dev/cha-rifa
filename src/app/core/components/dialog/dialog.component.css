@@ -1,4 +1,4 @@
-button{
+button {
   margin-bottom: 15px;
 }
 
@@ -6,13 +6,22 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--dialogBody);
+  visibility: visible;
+}
+.h2{
+  color: var(--text-body);
+  padding: 0;
 }
 
-.btn-center{
-  text-align: center;
-  margin: auto;
+.label{
+  color: var(--text-body);
 }
 
-mat-dialog-content{
-  margin-left: 200px;
+.formContainer {
+  padding: 15px 0 0 0;
+  align-items: center;
+  margin-left: 50%;
+  margin-right: 50%;
+  color: var(--text-body);
 }

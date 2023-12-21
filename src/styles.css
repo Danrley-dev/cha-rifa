@@ -7,7 +7,8 @@
   outline: 0;
   list-style: none;
   font-family: roboto, Arial, Helvetica, sans-serif;
-  button{
+
+  button {
     background: none;
     cursor: pointer;
   }
@@ -18,8 +19,11 @@
   --primary: #1976D2;
   --body1: #F4D8FE;
   --body2: #FFFFFF;
-  --text-menu: #FFFFFF;
+  --dialogBody: #FFFFFF;
   --text-body: #000000;
+  --form-field: #F4D8FE;
+  --button: #FFFFFF;
+  --button-text: #6D42BA;
 }
 
 :root .dark-theme {
@@ -27,8 +31,11 @@
   --primary: pink;
   --body1: #000000;
   --body2: #F696F8;
-  --text-menu: #FFFFFF;
+  --dialogBody: #302E30;
   --text-body: #FFFFFF;
+  --form-field: #F696F8;
+  --button: #6D42BA;
+  --button-text: #FFFFFF;
 }
 
 body {
@@ -36,26 +43,28 @@ body {
   height: 100vh;
 }
 
-.container{
+.container {
   width: 100%;
   margin: 0 auto;
 
-  h1{
+  h1 {
     font-size: 18px;
     font-weight: 700;
     margin: 50px 0 10px;
   }
 
-  p{
+  p {
     font-size: 16px;
   }
 
-  h1,p{
+  h1, p {
     color: var(--text-body);
   }
 }
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 
 @media (max-width: 600px) {
   overflow: hidden;
