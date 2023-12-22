@@ -1,23 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Alatsi&family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
 
-/*.container{*/
-/*  background-color: #1976D2;*/
-/*}*/
-
-.grid-number{
-  h1{
+.grid-number {
+  h1 {
     font-weight: bolder;
     font-family: 'Alatsi', sans-serif;
-    margin: 50px 0 0 0;
+    margin: 0;
   }
 
-  p{
+  p {
     margin: 0 0 10px 0;
     font-family: 'Alata', sans-serif;
   }
 }
 
-.button{
+.button {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
@@ -35,3 +32,29 @@
   margin-right: 10px;
   display: inline-block;
 }
+
+.container-text {
+  display: flex;
+  justify-content:space-around;
+  margin-top: 30px;
+  align-items: center;
+
+  .cha-rifa {
+    font-family: 'Carter One', sans-serif;
+    font-size: 32px;
+    color: var(--text-body);
+  }
+
+  .nome{
+    font-family: 'Luxurious Script', sans-serif;
+    font-size: 32px;
+    color:var(--heloisa);
+  }
+
+  img {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+  }
+}
+

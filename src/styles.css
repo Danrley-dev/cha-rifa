@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import 'ngx-toastr/toastr';
+@use '@ngneat/hot-toast/src/styles/styles.scss';
 
 * {
   padding: 0;
@@ -24,6 +26,7 @@
   --form-field: #F4D8FE;
   --button: #FFFFFF;
   --button-text: #6D42BA;
+  --heloisa: #FD94FF;
 }
 
 :root .dark-theme {
@@ -36,6 +39,7 @@
   --form-field: #F696F8;
   --button: #6D42BA;
   --button-text: #FFFFFF;
+  --heloisa: #000000;
 }
 
 body {
@@ -67,5 +71,5 @@ html, body {
 }
 
 @media (max-width: 600px) {
-  overflow: hidden;
+  //overflow: hidden;
 }

@@ -1,6 +1,23 @@
+<!--<div class="mat-elevation-z2 grid-number" >-->
+<!--  <mat-grid-list cols="6" rowHeight="2:1">-->
+<!--    <mat-grid-tile *ngFor="let number of numbers" class="number-tile"-->
+<!--                   [class.selected]="isNumberSelected(number) | async"-->
+<!--                   (click)="selectNumber(number)">-->
+<!--      {{ number }}-->
+<!--    </mat-grid-tile>-->
+<!--  </mat-grid-list>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;<ng-template #loading>&ndash;&gt;-->
+<!--&lt;!&ndash;  <app-loader label="Carregando..."></app-loader>&ndash;&gt;-->
+<!--&lt;!&ndash;</ng-template>&ndash;&gt;-->
+<!--&lt;!&ndash;*ngIf="info$ | async as info; else loading"&ndash;&gt;-->
+
 <div class="mat-elevation-z2 grid-number">
   <mat-grid-list cols="6" rowHeight="2:1">
-    <mat-grid-tile *ngFor="let number of numbers" class="number-tile" (click)="selectNumber(number)">
+    <mat-grid-tile *ngFor="let number of numbers" class="number-tile" (click)="selectNumber(number)"
+                   [style.background-color]="getTileBackgroundColor(number)"
+                   [ngClass]="{'selected': number == this.selectedNumber, 'exists': existsNumber(number)}">
       {{ number }}
     </mat-grid-tile>
   </mat-grid-list>

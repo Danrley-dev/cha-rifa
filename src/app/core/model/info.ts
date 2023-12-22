@@ -5,8 +5,8 @@ export interface Info {
   numeroSelecionado: string;
   nome: string;
   celular: string;
-  email: Date;
-  createdAt: Date;
+  email: string;
+  createdAt?: Date;
 }
 
 export const InfoConverter: Converter<Info> = {

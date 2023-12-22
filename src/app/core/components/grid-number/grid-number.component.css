@@ -18,3 +18,13 @@
   justify-content: center;
   margin-top: 50px;
 }
+
+.selected {
+  background-color: #4FD47C !important;
+  color: white;
+}
+
+.exists{
+  background-color: red !important;
+  color: white;
+}

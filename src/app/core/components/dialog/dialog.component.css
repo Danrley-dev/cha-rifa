@@ -25,3 +25,7 @@ form {
   margin-right: 50%;
   color: var(--text-body);
 }
+
+.white-text {
+  color: var(--text-body) !important;
+}

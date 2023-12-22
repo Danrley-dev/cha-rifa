@@ -21,7 +21,7 @@ export class FirebaseService {
   addInfo(info: Info) {
     return from(addDoc(this.info, {
       ...info,
-      createdAt: new Date()
+      createdAt: new Date(),
     }));
   }
 }

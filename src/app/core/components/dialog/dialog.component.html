@@ -1,24 +1,23 @@
 <form [formGroup]="formControl" (ngSubmit)="onSubmit()">
-  <h2 mat-dialog-title class="h2">Número escolhido: {{info.numeroSelecionado}}</h2>
+  <h2 mat-dialog-title class="h2">Número escolhido: {{numberSelect}}</h2>
   <div mat-dialog-content class="formContainer">
     <mat-form-field appearance="outline">
       <mat-label class="label">Nome</mat-label>
-      <input class="input" matInput placeholder="Seu nome" formControlName="nome" required/>
+      <input class="white-text" matInput placeholder="Seu nome" formControlName="nome" required/>
       <mat-error *ngIf="formControl.get('nome')?.errors?.['required']">Campo obrigatório</mat-error>
       <mat-icon matPrefix>person</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label class="label">Email</mat-label>
-      <input class="input" matInput placeholder="Seu email" formControlName="email" required/>
-      <mat-error *ngIf="formControl.get('email')?.errors?.['required']">Campo obrigatório</mat-error>
+      <input class="white-text" matInput placeholder="Seu email" formControlName="email"/>
       <mat-error *ngIf="formControl.get('email')?.errors?.['email']">Email inválido</mat-error>
       <mat-icon matPrefix>email</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label class="label">Whatsapp</mat-label>
-      <input class="input" matInput placeholder="Seu whatsapp" formControlName="whatsapp" required/>
+      <input class="white-text" matInput placeholder="Seu whatsapp" formControlName="whatsapp" required/>
       <mat-error *ngIf="formControl.get('whatsapp')?.errors?.['required']">Campo obrigatório</mat-error>
-      <mat-error *ngIf="formControl.get('whatsapp')?.errors?.['minlength']">DDD e número - 88952068372</mat-error>
+      <mat-error *ngIf="formControl.get('whatsapp')?.errors?.['minlength']">DDD e número - ex: 88952068372</mat-error>
       <mat-icon matPrefix>smartphone</mat-icon>
     </mat-form-field>
   </div>

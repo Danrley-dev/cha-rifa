@@ -1,19 +1,28 @@
-<div class="container" ><!--*ngIf="info$ | async as info; else loading"-->
+<div class="container"><!--*ngIf="info$ | async as info; else loading"-->
+
+  <div class="container-text">
+    <img src="assets/urso-balao.png">
+
+    <h1 class="cha-rifa">Chá Rifa </h1>
+    <h1 class="nome">Heloísa</h1>
+
+    <img src="assets/urso-flor.png">
+  </div>
 
   <div style="text-align:center" class="grid-number">
     <h1>Prêmio de R$ 200</h1>
     <p>A cada número escolhido receba um brinde</p>
   </div>
-  <app-grid-number></app-grid-number>
+  <app-grid-number (onSelectNumber)="onSelectNumber($event)" [info$]="info$"></app-grid-number>
 
   <div class="button">
-    <button mat-raised-button color="primary" (click)="onClickAdd()"> Escolher número </button>
+    <button mat-raised-button color="primary" (click)="onClickAdd()"> Escolher número</button>
   </div>
 
   <div class="color-list">
-    <div class="color-item" style="background-color: #ff0000;"></div>
-    <div class="color-item" style="background-color: #00ff00;"></div>
-    <div class="color-item" style="background-color: #0000ff;"></div>
+    <div class="color-item" style="background-color: #6DB8FD;"></div>
+    <div class="color-item" style="background-color: #FFE792;"></div>
+    <div class="color-item" style="background-color: #FFA3F6;"></div>
   </div>
 </div>
 

@@ -7,6 +7,7 @@ import {FormBuilder, FormsModule, ReactiveFormsModule, Validators} from "@angula
 import {MatButtonModule} from "@angular/material/button";
 import {Info} from "../../model/info";
 import {NgIf} from "@angular/common";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-dialog',
@@ -27,11 +28,34 @@ import {NgIf} from "@angular/common";
 })
 export class DialogComponent implements OnInit {
   info: Info = {} as Info;
+  numberSelect: number = 0
 
-  constructor(private fb: FormBuilder, private ref: MatDialogRef<DialogComponent>) {
+  constructor(
+    private fb: FormBuilder,
+    private ref: MatDialogRef<DialogComponent>,
+    private toastr: ToastrService
+  ) {
   }
 
   onSubmit() {
+    const {nome, email, whatsapp} = this.formControl.value
+    if (nome == null || nome == "") {
+      this.toastr.error("Nome é obrigatório", "", {
+        progressBar: true, closeButton: true
+      })
+    }
+    if (whatsapp == null || whatsapp == "") {
+      this.toastr.error("whatsapp é obrigatório.", "", {
+        progressBar: true, closeButton: true
+      })
+    }
+
+    this.info = {
+      numeroSelecionado: this.numberSelect.toString(),
+      nome: nome!,
+      celular: whatsapp!,
+      email: email ?? ''
+    }
     this.ref.close({info: this.info});
   }
 
@@ -41,8 +65,8 @@ export class DialogComponent implements OnInit {
   formControl = this.fb.group(
     {
       nome: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      whatsapp: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(11)]]
+      email: ['', [Validators.email]],
+      whatsapp: ['', [Validators.required, Validators.minLength(11)]]
     }
   );
 
