@@ -25,7 +25,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(provideStorage(() => getStorage())),
     provideToastr({
       timeOut: 5000,
-      positionClass: 'toast-top-right',
+      positionClass: 'toast-top-center',
     }),
     provideHotToastConfig({
       duration: 5000,

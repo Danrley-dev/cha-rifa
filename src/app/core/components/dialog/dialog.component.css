@@ -29,3 +29,6 @@ form {
 .white-text {
   color: var(--text-body) !important;
 }
+.white-text::placeholder {
+  color: var(--text-body) !important;
+}

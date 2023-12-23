@@ -17,25 +17,33 @@
 .button {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .color-list {
   display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-}
+  justify-content: center;
+  margin: 30px 0 0 0;
 
-.color-item {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  display: inline-block;
+  .color-item {
+    width: 28px;
+    height: 25px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+
+  p {
+    padding-right: 10px;
+    margin: 0;
+    font-family: 'Alatsi', sans-serif;
+    color: var(--text-body);
+    font-size: 15px;
+  }
 }
 
 .container-text {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   margin-top: 30px;
   align-items: center;
 
@@ -43,18 +51,20 @@
     font-family: 'Carter One', sans-serif;
     font-size: 32px;
     color: var(--text-body);
+    margin: 0;
   }
 
-  .nome{
+  .nome {
     font-family: 'Luxurious Script', sans-serif;
     font-size: 32px;
-    color:var(--heloisa);
+    color: var(--heloisa);
+    margin: 0;
+    text-shadow: 1px 1px 2px var(--text-body);
+    text-align: center;
   }
 
   img {
     width: 30%;
-    margin: 0;
-    padding: 0;
   }
 }
 

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import 'ngx-toastr/toastr';
-@use '@ngneat/hot-toast/src/styles/styles.scss';
 
 * {
   padding: 0;
@@ -9,6 +8,7 @@
   outline: 0;
   list-style: none;
   font-family: roboto, Arial, Helvetica, sans-serif;
+  /*overflow: hidden;*/
 
   button {
     background: none;
@@ -64,12 +64,4 @@ body {
   h1, p {
     color: var(--text-body);
   }
-}
-
-html, body {
-  height: 100%;
-}
-
-@media (max-width: 600px) {
-  //overflow: hidden;
 }

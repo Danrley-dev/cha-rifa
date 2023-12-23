@@ -8,16 +8,16 @@
       <mat-icon matPrefix>person</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label class="label">Email</mat-label>
-      <input class="white-text" matInput placeholder="Seu email" formControlName="email"/>
+      <mat-label class="label">Email (opcional)</mat-label>
+      <input class="white-text" matInput placeholder="Example@gmail.com" formControlName="email"/>
       <mat-error *ngIf="formControl.get('email')?.errors?.['email']">Email inválido</mat-error>
       <mat-icon matPrefix>email</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label class="label">Whatsapp</mat-label>
-      <input class="white-text" matInput placeholder="Seu whatsapp" formControlName="whatsapp" required/>
+      <input class="white-text" matInput placeholder="(88) 99237-3721" formControlName="whatsapp" required/>
       <mat-error *ngIf="formControl.get('whatsapp')?.errors?.['required']">Campo obrigatório</mat-error>
-      <mat-error *ngIf="formControl.get('whatsapp')?.errors?.['minlength']">DDD e número - ex: 88952068372</mat-error>
+      <mat-error *ngIf="formControl.get('whatsapp')?.errors?.['minlength']">mínimo de 11 números</mat-error>
       <mat-icon matPrefix>smartphone</mat-icon>
     </mat-form-field>
   </div>
