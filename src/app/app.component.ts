@@ -6,9 +6,10 @@ import {HeaderComponent} from "./core/components/header/header.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent],
-  template: `
-      <app-header></app-header>
-      <router-outlet></router-outlet>`
+  imports: [
+    HeaderComponent,
+    RouterOutlet
+  ],
+  templateUrl: './app.component.html'
 })
 export class AppComponent {}
