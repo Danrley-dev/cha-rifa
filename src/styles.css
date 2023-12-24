@@ -41,9 +41,10 @@
   --heloisa: #000000;
 }
 
+
 body {
   background-image: linear-gradient(to top, var(--body1), var(--body2));
-  height: 100vh;
+  height: 100%;
 }
 
 .container {
@@ -63,4 +64,8 @@ body {
   h1, p {
     color: var(--text-body);
   }
+}
+
+@media (max-width: 650px) {
+  html, body { height: 100%; }
 }
