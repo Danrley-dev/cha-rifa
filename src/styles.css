@@ -68,7 +68,3 @@ body {
     color: var(--text-body);
   }
 }
-
-/*@media (max-width: 650px) {*/
-/*  html, body { height: 100vh; }*/
-/*}*/
