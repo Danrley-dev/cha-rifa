@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
               this.toast.observe({
                 loading: 'Adicionando...',
                 error: 'Ocorreu um erro',
-                success: 'Salvo com sucesso. Boa sorte!',
+                success: 'Salvo com sucesso, em breve você receberá uma mensagem no whatsapp. Boa sorte!'
               })
             )
             .subscribe();

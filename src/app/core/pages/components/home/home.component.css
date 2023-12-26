@@ -8,9 +8,15 @@
     margin: 0;
   }
 
-  p {
-    margin: 0 0 10px 0;
+  .sorteio {
+    margin: 0;
     font-family: 'Alata', sans-serif;
+  }
+
+  .limite{
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: bold;
   }
 }
 
